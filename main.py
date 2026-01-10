@@ -2,6 +2,8 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout,
                               QLabel, QHBoxLayout, QLineEdit, QListWidget, 
                               QTextEdit, QInputDialog,)
+from PyQt5.QtGui import QFont, QIcon
+
 import json
 import os
 
@@ -68,7 +70,15 @@ col_2.addLayout(row_4)
 layout_notes.addLayout(col_1, 2)
 layout_notes.addLayout(col_2, 1)
 window.setLayout(layout_notes)
+
+icon = QIcon("assets/icon.ico")
+window.setWindowIcon(icon)
+
+
 window.show()
+
+
+
 
 def show_note():
     key = list_notes.selectedItems()[0].text()
