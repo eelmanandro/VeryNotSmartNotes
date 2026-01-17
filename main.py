@@ -168,3 +168,6 @@ app.exec_()
 
 
 
+# Test function for merge conflict
+def add_two_numbers(a, b):
+    return a * b + 2
